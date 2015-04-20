@@ -25,6 +25,7 @@ module MiniFB
     # Global constants
     FB_URL = "http://api.facebook.com/restserver.php"
     FB_API_VERSION = "1.0"
+    GRAPH_API_VERSION = "2.2"
 
     @@logging = false
     @@log = Logger.new(STDOUT)
@@ -486,7 +487,7 @@ module MiniFB
     end
 
     def self.graph_base
-        "https://graph.facebook.com/"
+        "https://graph.facebook.com/v#{GRAPH_API_VERSION}/"
     end
 
     # options:
